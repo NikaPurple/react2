@@ -9,19 +9,21 @@ import C07matrizOperaciones from "./pagina/C07matrizOperaciones";
 function App() {
   return (
     <div>
+      <h1>Practicas... React</h1>
       <C01componente />
       Hola mundo desde react...
-      <h1>Componente</h1>
+      <i class="large material-icons">textsms</i>
+      <hr/>
       <C02contador/>
-      <h1>Componente</h1>
+      <hr/>
       <C03dobleestado/>
-      <h1>Componente</h1>
+      <hr/>
       <C04variable/>
-      <h1>Componente</h1>
+      <hr/>
       <C05operador/>
-      <h1>Componente</h1>
+      <hr/>
       <C06matriz/>
-      <h1>Componente</h1>
+      <hr/>
       <C07matrizOperaciones/>
     </div>
   );
