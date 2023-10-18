@@ -1,4 +1,3 @@
-import AppForm from "./components/AppForm";
 import C01componente from "./pagina/C01componente";
 import C02contador from "./pagina/C02contador";
 import C03compCss from "./pagina/C03compCss";
@@ -10,8 +9,7 @@ import C07matrizOperaciones from "./pagina/C07matrizOperaciones";
 
 function App() {
   return (
-    <div style={{padding:"10px", background:"greenyellow", width:"350px"}}>
-      <AppForm/>
+    <div>
       <h1>Practicas... React</h1>
       <C01componente />
       Hola mundo desde react...
