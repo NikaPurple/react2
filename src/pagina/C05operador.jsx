@@ -10,4 +10,4 @@ const C05operador = () => {
     )
 }
 
-export default C05operador
+export default C05operador;

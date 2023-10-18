@@ -55,4 +55,4 @@ const C07matrizOperaciones = () => {
   )
 }
 
-export default C07matrizOperaciones
+export default C07matrizOperaciones;

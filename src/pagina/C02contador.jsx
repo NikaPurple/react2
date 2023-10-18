@@ -16,4 +16,4 @@ const C02contador = () => {
     )
 }
 
-export default C02contador
+export default C02contador;

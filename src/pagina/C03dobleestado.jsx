@@ -21,4 +21,4 @@ const C03dobleestado = () =>{
     )
 }
 
-export default C03dobleestado
+export default C03dobleestado;

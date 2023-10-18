@@ -1,5 +1,7 @@
+import AppForm from "./components/AppForm";
 import C01componente from "./pagina/C01componente";
 import C02contador from "./pagina/C02contador";
+import C03compCss from "./pagina/C03compCss";
 import C03dobleestado from "./pagina/C03dobleestado";
 import C04variable from "./pagina/C04variable";
 import C05operador from "./pagina/C05operador";
@@ -8,7 +10,8 @@ import C07matrizOperaciones from "./pagina/C07matrizOperaciones";
 
 function App() {
   return (
-    <div>
+    <div style={{padding:"10px", background:"greenyellow", width:"350px"}}>
+      <AppForm/>
       <h1>Practicas... React</h1>
       <C01componente />
       Hola mundo desde react...
@@ -18,7 +21,9 @@ function App() {
       <hr/>
       <C03dobleestado/>
       <hr/>
-      <C04variable/>
+      <C03compCss/>
+      <hr/>
+      <C04variable xVariable="Lectura a variables"/>
       <hr/>
       <C05operador/>
       <hr/>
