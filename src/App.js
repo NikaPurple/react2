@@ -1,21 +1,22 @@
 import React from 'react'
-import { Link, BrowserRouter as Router } from "react-router-dom";
-import Rutas from './ruteo/Rutas'
-import BarraNavegacion from './ruteo/BarraNavegacion';
+import { BrowserRouter as Router } from 'react-router-dom'
+import { useAuth} from "./ruteo/AuthContext";
+import BarraRutasProtected from './ruteo/BarraRutasProtected';
+import BarraRutasPublic from './ruteo/BarraRutasPublic';
 
-//Par que funcione $ npm install react-router-dom
 
 const App = () => {
+  const { user } = useAuth();
   return (
-    <div style={{ background:"violet" }}>
-      <h1>App.js</h1>
+    <div>
+      
+      <h1>Examen App.js</h1>
+      <p>08/11/2023 - COMPUTACION E INFORMATICA NOCHE VI --- Cabrera Camargo, Nicole Sara</p>
       <Router>
-        <BarraNavegacion/>
-        <Rutas/>
-        
+      { user ? <BarraRutasProtected /> : <BarraRutasPublic />}
       </Router>
     </div>
   )
 }
 
-export default App;
+export default App

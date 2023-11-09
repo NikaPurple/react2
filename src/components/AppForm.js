@@ -1,7 +1,6 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { db } from './firebase';
 import { addDoc, collection, doc, getDoc, updateDoc } from 'firebase/firestore';
-import { useEffect } from 'react';
 
 const AppForm = (props) => {
 
@@ -11,26 +10,28 @@ const AppForm = (props) => {
   console.log(objeto);
 
   const handleSubmit  = async (e)=> { //manejador de submit
-    e.preventDefault();
-
-    try {
-      if (props.idActual === "") {  //guardar
-        if(validarForm()){
-          addDoc (collection(db, 'persona'), objeto);
-          console.log("se guardo con exito"); 
-        }else{
-          console.log("no se guardo")
-        }
-      }else{   //actualizar
-        await updateDoc(doc(collection(db,"persona"),props.idActual),objeto);
-        alert("Se actualizo...");
-        props.setIdActual('');
-      }
-      setObjeto(camposRegistro);
     
-    }catch (error){
-      console.error();
+    try {
+        e.preventDefault();
+        if(props.idActual === ""){  ////guardar
+            if(validarForm()){
+                addDoc (collection(db, 'persona'), objeto);
+                console.log("se guardo con exito"); 
+            }else{
+                console.log("no se guardo")
+            }
+        }else{
+
+            await updateDoc(doc(collection(db, "persona"), props.idActual), objeto);
+            alert("Se actualizo...");
+
+            props.setIdActual('');
+        }
+        setObjeto(camposRegistro);
+    } catch (error) {
+        console.log("Error en CREAR o Update:", error);
     }
+    
   }
 
   // manejador del estado de cambios
