@@ -26,6 +26,7 @@ import ListaDeDeportes from '../protegido/sistemacrud/ListaDeDeportes';
 import ListaDeCarreras from '../protegido/sistemacrud/ListaDeCarreras';
 import Pdf from '../protegido/sistemafile/Pdf';
 import Videos from '../protegido/sistemafile/Videos';
+import AppEgresados from '../protegido/sistemacrud/AppEgresados';
 
 const BarraRutasProtected = () => {
     const { user } = useAuth();
@@ -59,15 +60,17 @@ const BarraRutasProtected = () => {
               
           <div id="menu">
             <ul>
+              <li><Link to="/sistema-crud/carre">Carreras</Link> </li>
+              <li><Link to="/sistema-crud/depor">Deportes</Link> </li>
+              <li><Link to="/sistema-crud/egre">Egresados</Link> </li>
               <li><Link to="/sistema-crud/applista">Alumnos(App-Lista)</Link> </li>
               <li><Link to="/sistema-crud/prof">Profesores</Link> </li>
-              <li><Link to="/sistema-crud/depor">Deportes</Link> </li>
-              <li><Link to="/sistema-crud/carre">Carreras</Link> </li>
+              
 
-              <li><Link to="/sistema-file/fotos">Galeria de Fotos</Link> </li>
-              <li><Link to="/sistema-file/docword">Doc.Pdf</Link> </li>
               <li><Link to="/sistema-file/videos">Videos</Link> </li>
-              <li><Link to="/sistema-file/docword">Doc. word</Link> </li>
+              <li><Link to="/sistema-file/fotos">Fotos</Link> </li>
+              <li><Link to="/sistema-file/docword">PDF</Link> </li>
+              <li><Link to="/sistema-file/docword">WORD</Link> </li>
               
             </ul>
           </div>
@@ -80,11 +83,14 @@ const BarraRutasProtected = () => {
 
           
           <Route path="/sistema-crud" element={<MarcoParaSistemaCRUD />}>
+            <Route path="carre" element={<ListaDeCarreras />} />
+            <Route path="depor" element={<ListaDeDeportes />} />
+            <Route path="egre" element={<AppEgresados />} />
             <Route index element={<SistemaCRUD />} />
             <Route path="applista" element={<AppLista />} />
             <Route path="prof" element={<ListaDeProfesores />} />
-            <Route path="depor" element={<ListaDeDeportes />} />
-            <Route path="carre" element={<ListaDeCarreras />} />
+            
+            
             
           </Route>
   
