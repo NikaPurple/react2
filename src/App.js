@@ -11,7 +11,7 @@ const App = () => {
     <div>
       
       <h1>Examen App.js</h1>
-      <p>08/11/2023 - COMPUTACION E INFORMATICA NOCHE VI --- Cabrera Camargo, Nicole Sara</p>
+      <p>14/11/2023 - COMPUTACION E INFORMATICA NOCHE VI --- Cabrera Camargo, Nicole Sara</p>
       <Router>
       { user ? <BarraRutasProtected /> : <BarraRutasPublic />}
       </Router>

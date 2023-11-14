@@ -2,7 +2,7 @@ import React from 'react'
 
 const Noticias = () => {
   return (
-    <div>
+    <div id="public">
       <h1>NOTICIAS</h1>
       <p>PAGINA DE NOTICIAS</p>
     </div>

@@ -23,7 +23,7 @@ const BarraRutasPublic = () => {
     }
   
     return (
-      <div style={{ background:"#FCEC52", }}>
+      <div>
         <nav>
           <div id="login">
             <ul>
