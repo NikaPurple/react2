@@ -52,7 +52,7 @@ function LoginForm() {
 
         <div className='form-group input-group'>
           <div className='input-group-text bd-light'>
-            <i className='material-icons'>group_add</i>
+            <i className='material-icons'>contact_mail</i>
           </div>
           <input className='form-control float-start' value={email} type="email" placeholder='Email'  
             onChange={(e) => setEmail(e.target.value)} />
@@ -60,7 +60,7 @@ function LoginForm() {
         
         <div className='form-group input-group'>
           <div className='input-group-text bd-light'>
-            <i className='material-icons'>star_half</i>
+            <i className='material-icons'>lock</i>
           </div>
           <input className='form-control float-start' value={password} type="password" placeholder='Contraseña'  
             onChange={(e) => setPassword(e.target.value)} />

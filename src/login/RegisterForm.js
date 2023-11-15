@@ -48,7 +48,7 @@ function RegisterForm() {
 
         <div className='form-group input-group'>
           <div className='input-group-text bd-light'>
-            <i className='material-icons'>group_add</i>
+            <i className='material-icons'>person_add</i>
           </div>
           <input className='form-control float-start' placeholder='Email'  
             type="email" value={email} onChange={(e) => setEmail(e.target.value)} />
@@ -56,7 +56,7 @@ function RegisterForm() {
         
         <div className='form-group input-group'>
           <div className='input-group-text bd-light'>
-            <i className='material-icons'>star_half</i>
+            <i className='material-icons'>lock</i>
           </div>
           <input className='form-control float-start' placeholder='Contraseña'  
             type="password" value={password} onChange={(e) => setPassword(e.target.value)} />
